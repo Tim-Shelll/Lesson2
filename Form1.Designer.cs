@@ -41,7 +41,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(560, 49);
+            this.label4.Location = new System.Drawing.Point(73, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 17);
             this.label4.TabIndex = 15;
@@ -50,9 +50,9 @@
             // 
             // koment
             // 
-            this.koment.Location = new System.Drawing.Point(472, 79);
+            this.koment.Location = new System.Drawing.Point(12, 119);
             this.koment.Name = "koment";
-            this.koment.Size = new System.Drawing.Size(316, 22);
+            this.koment.Size = new System.Drawing.Size(383, 22);
             this.koment.TabIndex = 14;
             this.koment.TextChanged += new System.EventHandler(this.koment_TextChanged);
             // 
@@ -69,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 49);
+            this.label2.Location = new System.Drawing.Point(73, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 17);
             this.label2.TabIndex = 12;
@@ -78,7 +78,7 @@
             // 
             // put
             // 
-            this.put.Location = new System.Drawing.Point(12, 78);
+            this.put.Location = new System.Drawing.Point(12, 49);
             this.put.Name = "put";
             this.put.Size = new System.Drawing.Size(316, 22);
             this.put.TabIndex = 11;
@@ -96,17 +96,19 @@
             // 
             // zapis
             // 
-            this.zapis.Location = new System.Drawing.Point(177, 106);
+            this.zapis.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.zapis.ForeColor = System.Drawing.SystemColors.Control;
+            this.zapis.Location = new System.Drawing.Point(583, 114);
             this.zapis.Name = "zapis";
             this.zapis.Size = new System.Drawing.Size(140, 33);
             this.zapis.TabIndex = 9;
             this.zapis.Text = "записать";
-            this.zapis.UseVisualStyleBackColor = true;
+            this.zapis.UseVisualStyleBackColor = false;
             this.zapis.Click += new System.EventHandler(this.zapis_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(334, 72);
+            this.button1.Location = new System.Drawing.Point(334, 43);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(61, 35);
             this.button1.TabIndex = 16;
