@@ -9,23 +9,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
-using System.Threading;
 
 namespace Project
 {
     public partial class Form1 : Form
     {
+        public Timer timer = new Timer();
+
         bool flag = true;
         public Form1()
         {
+            timer.Interval = 1000;
+            timer.Tick += new EventHandler(TimerEventProcessor);
+            timer.Start();
             InitializeComponent();
         }
 
         private void zapis_Click(object sender, EventArgs e)
         {
             string result = DateTime.Now + "/" + System.Security.Principal.WindowsIdentity.GetCurrent().Name + "/" + koment.Text;
-            Check.Read(result,put.Text);
-            fail.Text = (Check.Write());
+            Check.Read(result, put.Text);
+
         }
 
         private void koment_TextChanged(object sender, EventArgs e)
@@ -62,12 +66,17 @@ namespace Project
         {
             OpenFileDialog Fd = new OpenFileDialog();
             Fd.Title = "Выберите файл";
-            Fd.InitialDirectory = @"D:\";
+            Fd.InitialDirectory = Environment.CurrentDirectory;
             Fd.Filter = "Текстовые файлы (*.txt)|*.txt";
             if (Fd.ShowDialog() == DialogResult.OK)
             {
                 put.Text = Fd.FileName;
             }
+        }
+
+        private void TimerEventProcessor(object sender, EventArgs e)
+        {
+            fail.Text = (Check.Write());
         }
     }
 }

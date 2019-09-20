@@ -17,7 +17,8 @@ namespace Project
             {
                 StreamReader read = new StreamReader((new FileStream(Check.name, FileMode.Open, FileAccess.Read)));
                 string[] text = File.ReadAllLines(Check.name);
-                result = text[text.Length - 1];
+                for (int i = 0; i < text.Length; i++)
+                    result += text[i] + "\r\n";
                 read.Close();
             }
             return result;

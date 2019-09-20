@@ -87,9 +87,10 @@
             // fail
             // 
             this.fail.Location = new System.Drawing.Point(73, 177);
+            this.fail.Multiline = true;
             this.fail.Name = "fail";
             this.fail.ReadOnly = true;
-            this.fail.Size = new System.Drawing.Size(650, 22);
+            this.fail.Size = new System.Drawing.Size(650, 250);
             this.fail.TabIndex = 10;
             this.fail.TextChanged += new System.EventHandler(this.fail_TextChanged);
             // 
